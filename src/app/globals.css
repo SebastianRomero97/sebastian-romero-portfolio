@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
+
+/* ================================
+   TOKENS (base)
+================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Palette (requested) */
+  --black: #0b0b0b;
+  --gray: #2a2a2a;
+  --brown: #6b4f3f;
+  --white: #f5f5f5;
+
+  /* Theme tokens (Tailwind template expects these) */
+  --background: var(--black);
+  --foreground: var(--white);
+
+  /* Typography */
+  --font-brand: "Cinzel", serif;
 }
 
+/* Si querés mantener la “estructura” del template, dejamos esto */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  /* Opcional: exponemos la brand font como token de Tailwind */
+  --font-sans: var(--font-brand);
 }
 
+/* (Opcional) Si querés que dark sea igual (tu sitio es oscuro),
+   lo dejamos igual para no cambiar tokens según preferencia del sistema */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--black);
+    --foreground: var(--white);
   }
+}
+
+/* ================================
+   BASE
+================================ */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-brand);
+  line-height: 1.6;
+}
+
+/* Headings estilo “cinematográfico” */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-brand);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ================================
+   OPTIONAL HELPER CLASSES
+   (por si querés usar tokens rápido en className)
+================================ */
+.text-brown {
+  color: var(--brown);
+}
+.bg-gray {
+  background: var(--gray);
+}
+.border-brown {
+  border-color: var(--brown);
 }
