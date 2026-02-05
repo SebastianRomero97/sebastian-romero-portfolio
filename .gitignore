@@ -1,41 +1,79 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-# dependencies
-/node_modules
-/.pnp
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage
+coverage
+*.lcov
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+web_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# dotenv environment variable files
+.env
+.env.*
+!.env.example
+
+# Next.js build output
+.next
+out
+
+# Production builds
+build
+dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Vercel
+.vercel
+
+# Yarn / PnP
+.pnp
 .pnp.*
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
 !.yarn/releases
+!.yarn/sdks
 !.yarn/versions
 
-# testing
-/coverage
+# SvelteKit
+.svelte-kit/
 
-# next.js
-/.next/
-/out/
+# Docusaurus
+.docusaurus
 
-# production
-/build
+# Firebase
+.firebase/
 
-# misc
-.DS_Store
-*.pem
+# TernJS
+.tern-port
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# VSCode extension testing
+.vscode-test
 
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# Vite logs files
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
