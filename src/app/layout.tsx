@@ -1,16 +1,22 @@
 import type { Metadata } from "next";
-import { Cinzel } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const cinzel = Cinzel({
-  variable: "--font-brand",
+const titleFont = Space_Grotesk({
+  variable: "--font-title",
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
+
+const bodyFont = Inter({
+  variable: "--font-text",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "Sebastian Romero",
-  description: "Portafolio personal",
+  title: "Sebastian Romero | Frontend Portfolio",
+  description: "Portafolio frontend con enfoque en experiencia y negocio.",
 };
 
 export default function RootLayout({
@@ -19,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${cinzel.variable} antialiased`}>
+    <html lang="es">
+      <body className={`${titleFont.variable} ${bodyFont.variable} antialiased`}>
         {children}
       </body>
     </html>
