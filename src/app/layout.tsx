@@ -15,8 +15,9 @@ const bodyFont = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Sebastian Romero | Frontend Portfolio",
-  description: "Portafolio frontend con enfoque en experiencia y negocio.",
+  title: "Sebastian Antonio Romero | Portfolio",
+  description:
+    "Desarrollador web full stack con especialización en frontend · Buenos Aires, ARG.",
 };
 
 export default function RootLayout({
