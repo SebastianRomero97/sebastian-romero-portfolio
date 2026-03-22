@@ -86,6 +86,10 @@ const SKILL_BRAND_COLOR: Record<string, string> = {
   /** Blanco para buen contraste sobre card oscura */
   "Next.js": "#ffffff",
   "Tailwind CSS": "#06b6d4",
+  Tailwind: "#06b6d4",
+  Vercel: "#ffffff",
+  /** Simple Icons — logo claro sobre fondo oscuro */
+  "CSS Modules": "#e8e8e8",
   "Node.js": "#339933",
   /** Verde asociado a Express sobre fondo oscuro */
   Express: "#68a063",
@@ -106,13 +110,18 @@ export const skillShowcase: SkillShowcaseItem[] =
     })),
   );
 
+/** Color de ícono para stack en tarjetas de proyecto (mismas claves que en `stack`) */
+export function getStackIconBrandColor(techName: string): string {
+  return SKILL_BRAND_COLOR[techName] ?? "#6366f1";
+}
+
 export const projects: ProjectItem[] = [
   {
     id: "smash-center",
     title: "Smash Center",
     summary: "Sitio de alto impacto visual para marca deportiva.",
     impact: "Mejora de presencia digital y gestion de clientes.",
-    stack: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
+    stack: ["Next.js", "TypeScript", "Tailwind", "CSS Modules", "Vercel"],
     status: "live",
     liveUrl: "https://smashcenter.vercel.app/",
   },

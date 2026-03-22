@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ContactSocialLinks from "@/components/ContactSocialLinks";
+import ProjectStackIcons from "@/components/ProjectStackIcons";
 import SkillTechCard from "@/components/SkillTechCard";
 import {
   educationSection,
@@ -145,13 +146,7 @@ export default function Home() {
               <p className="mt-4 text-sm">{project.summary}</p>
               <p className="mt-2 text-sm text-foreground">{project.impact}</p>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.stack.map((item) => (
-                  <span key={item} className="pill">
-                    {item}
-                  </span>
-                ))}
-              </div>
+              <ProjectStackIcons stack={project.stack} />
 
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.liveUrl ? (

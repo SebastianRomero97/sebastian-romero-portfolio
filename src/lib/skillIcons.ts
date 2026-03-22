@@ -8,6 +8,10 @@ export const SLUG_BY_SKILL: Record<string, string> = {
   React: "react",
   "Next.js": "nextdotjs",
   "Tailwind CSS": "tailwindcss",
+  /** Nombre corto usado en stack de proyectos */
+  Tailwind: "tailwindcss",
+  Vercel: "vercel",
+  "CSS Modules": "cssmodules",
   SCSS: "sass",
   "Node.js": "nodedotjs",
   Express: "express",
