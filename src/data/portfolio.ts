@@ -131,7 +131,8 @@ export const projects: ProjectItem[] = [
     summary: "E-commerce de productos apple.",
     impact: "Mejora la experiencia de compra y la navegacion.",
     stack: ["Next.js", "TypeScript", "Tailwind", "Vercel"],
-    status: "coming",
+    status: "live",
+    liveUrl: "https://baires-tech.vercel.app/"
   },
 ];
 
